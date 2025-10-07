@@ -23,15 +23,11 @@ Describes electric potential distribution
 ε = permittivity
 
 Why "Self-Consistent"?
+
+<img width="412" height="157" alt="image" src="https://github.com/user-attachments/assets/87de428c-cd34-4974-be18-a28124234da0" />
+
 The two equations are coupled and must be solved iteratively:
-┌─────────────────────────────────────────┐
-│  1. Start with initial potential V(x)   │
-│  2. Solve Schrödinger → get ψ, E       │
-│  3. Calculate charge density ρ from ψ   │
-│  4. Solve Poisson → get new V(x)       │
-│  5. Check convergence                   │
-│  6. If not converged, repeat from step 2│
-└─────────────────────────────────────────┘
+
 Why Non-Uniform Mesh?
 Problem with Uniform Mesh:
 
@@ -46,14 +42,8 @@ Coarse mesh in slowly varying regions
 Better accuracy with fewer grid points
 Reduced computational cost
 
-Example Mesh Distribution:
-Dense spacing:  |.|.|.|.    |.|.|.|.
-                ↑            ↑
-            Interface    Quantum well
-            
-Sparse spacing: |....|....|....|
-                ↑
-            Bulk region
+<img width="747" height="244" alt="image" src="https://github.com/user-attachments/assets/3b5d75f5-c2c6-4bbe-8e3c-e68a4913657c" />
+
 Numerical Solution Method
 Finite Difference Method:
 The second derivative is approximated as:
